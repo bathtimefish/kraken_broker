@@ -1,0 +1,67 @@
+# Storage Adaptors
+# InfluxDB
+# influxdb:
+#   type: 'influxdb'
+#   name: 'InfluxDB'
+#   host: 'http://localhost'
+#   port: 8086
+#   token: '[your_admin_token]'
+#   organization: 'default'
+#   bucket: 'mydb'
+  
+# # Redis
+# redis:
+#   type: 'redis'
+#   name: 'Redis'
+#   host: '127.0.0.1'
+#   port: 6379 
+#   username: 'root'
+#   password: 'root' 
+#   keyPrefix: 'kraken'
+#   separator: '#'
+# # MongoDB
+# mongodb:
+#   type: 'monbodb'
+#   name: 'MongoDB'
+#   host: 'mongodb://localhost'
+#   port: 27017
+#   username: 'root'
+#   password: 'root'
+#   database: 'mydb'
+# # MySQL
+# mysql:
+#   type: 'mysql'
+#   name: 'MySQL'
+#   host: '127.0.0.1'
+#   port: 3306
+#   username: 'root'
+#   password: 'root'
+#   database: 'mydb'
+# Tinkermode
+# tinkermode:
+#   deviceId: 34869
+#   deviceApikey: '[your_device_api_token]'
+
+#   
+# Notification Adaptors
+# Slack
+slack:
+  type: 'slack'
+  name: 'Slack Incoming Webhook'
+  url: 'https://hooks.slack.com/services/[your_service_keys]'
+# # Webhook
+# webhook:
+#   type: 'webhook'
+#   name: 'Webhook push notification API'
+#   targets:
+#     -
+#       name: "webhook1"
+#       url: 'http://example1/hooks/event'
+#     -
+#       name: "webhook2"
+#       url: 'http://example2/hooks/event'
+# # WebSocket
+# websocket:
+#   type: 'websocket'
+#   name: 'WebSocket push message API'
+#   port: 6006

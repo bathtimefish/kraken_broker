@@ -1,0 +1,77 @@
+{
+  "name": "kraken-iot-broker",
+  "version": "0.2.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "webpack --config webpack.config.js",
+    "test": "jest",
+    "cov": "jest --coverage",
+    "show-cov": "open ./coverage/lcov-report/index.html"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.jest.json"
+      }
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testURL": "http://localhost/",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts?|jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ]
+  },
+  "keywords": [],
+  "author": "bathtimefish",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ioredis": "^4.19.2",
+    "@types/jest": "^27.5.1",
+    "@types/js-yaml": "^4.0.0",
+    "@types/moment": "^2.13.0",
+    "@types/mongodb": "^3.6.3",
+    "@types/mysql": "^2.15.17",
+    "@types/node": "^17.0.33",
+    "@types/node-fetch": "^2.5.12",
+    "@types/ws": "^7.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "^7.32.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-webpack-plugin": "^3.1.1",
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.2",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^3.15.0",
+    "@grpc/proto-loader": "^0.5.5",
+    "@influxdata/influxdb-client": "^1.9.0",
+    "google-protobuf": "^3.13.0",
+    "grpc": "^1.24.3",
+    "ioredis": "^4.19.4",
+    "js-yaml": "^4.0.0",
+    "moment": "^2.28.0",
+    "mongodb": "^3.6.3",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.6",
+    "ws": "^7.4.2"
+  }
+}

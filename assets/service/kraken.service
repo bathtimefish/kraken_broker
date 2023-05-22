@@ -1,0 +1,19 @@
+[Unit]
+Description=KrakenIotBroker
+After=syslog.target network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/kraken-broker.env
+WorkingDirectory=/home/ubuntu/kraken-iot-broker
+ExecStart=/usr/local/bin/node /home/ubuntu/kraken-iot-broker/dist/index.js
+TimeoutStopSec=5
+KillMode=process
+Restart=always
+User=root
+Group=root
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy = multi-user.target

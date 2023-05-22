@@ -1,0 +1,4 @@
+{
+  "jest.pathToConfig": "./package.json",
+  "jest.pathToJest": "npm test --"
+}
