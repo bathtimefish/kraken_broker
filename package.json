@@ -1,6 +1,6 @@
 {
-  "name": "kraken-iot-broker",
-  "version": "0.2.0",
+  "name": "kraken_broker",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
