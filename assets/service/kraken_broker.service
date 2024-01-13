@@ -1,12 +1,12 @@
 [Unit]
-Description=KrakenIotBroker
+Description=KrakenBroker
 After=syslog.target network.target
 
 [Service]
 Type=simple
-EnvironmentFile=/etc/default/kraken-broker.env
-WorkingDirectory=/home/ubuntu/kraken-iot-broker
-ExecStart=/usr/local/bin/node /home/ubuntu/kraken-iot-broker/dist/index.js
+EnvironmentFile=/etc/default/kraken_broker.env
+WorkingDirectory=/home/ubuntu/kraken_broker
+ExecStart=/usr/local/bin/node /home/ubuntu/kraken_broker/dist/index.js
 TimeoutStopSec=5
 KillMode=process
 Restart=always
