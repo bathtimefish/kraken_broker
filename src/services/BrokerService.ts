@@ -3,6 +3,7 @@ import logger from '../core/logger';
 // import your custom brokers below
 // import ExampleBroker from '../brokers/ExampleBroker';
 import Broker from '../brokers/Broker';
+import HeatbeatBroker from '../brokers/HeatbeatBroker';
 
 class BrokerService {
   _SERVICE_NAME = 'Broker Service';
@@ -13,6 +14,7 @@ class BrokerService {
     // !!! set your custom brokers berrow !!!
     this._BROKERS = [
       new Broker(),
+      new HeatbeatBroker(),
       // new ExampleBroker(),
     ];
     const brokerMgr = new BrokerServiceManager();
