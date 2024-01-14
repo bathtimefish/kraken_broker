@@ -12,7 +12,7 @@ class HeatbeatBroker {
    * Here is a sample code which store the payload data to InfluxDB
    */
   private _INFLUX;
-  private _MEASUREMENT = 'kraken';
+  private _MEASUREMENT = 'heatbeat';
   constructor() {
     /* Write the logic here if you would like to run something when the Broker start was started */
     /*
@@ -40,7 +40,7 @@ class HeatbeatBroker {
     const point = new this._INFLUX.Point(this._MEASUREMENT);
     point.intField('ping', 1)
       .tag('client_id', payload.id)
-      .timestamp(new Date(payload.dt));
+      .timestamp(new Date(payload.dt * 1000));
     api.writePoint(point);
     logger.log('Saved ping data to InfluxDB from kraken edge heartbeater');
     await api.close();
