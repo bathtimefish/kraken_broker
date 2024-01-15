@@ -1,7 +1,7 @@
 # Build Kraken Broker image
 
 ```
-docker build --build-arg GITHUB_USER=bathtimefish --build-arg GITHUB_TOKEN=31c728b2732d1cc3d6d259d49d0e91b275f920e8 --no-cache -t bathtimefish/kraken-iot-broker:1.0.0 .
+docker build --build-arg GITHUB_USER=bathtimefish --build-arg GITHUB_TOKEN=[YOUR GITHUB ACCESS TOKEN] --no-cache -t bathtimefish/kraken-iot-broker:1.0.0 .
 ```
 
 # Run Collector container using docker commmand
